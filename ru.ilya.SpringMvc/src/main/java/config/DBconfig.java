@@ -70,7 +70,7 @@ public class DBconfig {
         transactionManager.setSessionFactory(sessionFactory().getObject());
         return transactionManager;
     }
- 
+
 
 }
 

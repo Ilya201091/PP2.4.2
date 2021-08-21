@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>User Info</title>
+    <title>Title</title>
 </head>
 <body>
 <table th:border="1">
@@ -24,8 +24,6 @@
 <form th:method="delete" th:action="@{/users/delete={id}(id=${user.getId()})}" id="delete">
     <input type="submit" value="Return">
 </form>
-
-
 
 </body>
 </html>

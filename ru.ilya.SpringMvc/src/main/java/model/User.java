@@ -23,6 +23,7 @@ public class User {
 
     @Id
     @GeneratedValue
+    @Column(name = "id")
     private Long id;
 
     @Column(name = "Username")
