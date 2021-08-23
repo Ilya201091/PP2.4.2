@@ -1,4 +1,4 @@
-package config;
+package ru.jm.config;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 

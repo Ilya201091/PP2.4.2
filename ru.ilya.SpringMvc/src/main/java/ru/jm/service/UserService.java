@@ -1,6 +1,6 @@
-package service;
+package ru.jm.service;
 
-import model.User;
+import ru.jm.model.User;
 
 import java.util.List;
 

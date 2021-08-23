@@ -28,7 +28,7 @@ NOTE: Picked up JDK_JAVA_OPTIONS:  --add-opens=java.base/java.lang=ALL-UNNAMED -
 23-Aug-2021 09:56:05.239 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
 23-Aug-2021 09:56:05.239 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
 23-Aug-2021 09:56:05.239 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
-23-Aug-2021 09:56:05.239 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\Р�Р»СЊСЏ\AppData\Local\JetBrains\IntelliJIdea2021.2\tomcat\02b287d9-ed64-49f4-aaab-aa31717db2ff\conf\logging.properties
+23-Aug-2021 09:56:05.239 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.ru.jm.config.file=C:\Users\Р�Р»СЊСЏ\AppData\Local\JetBrains\IntelliJIdea2021.2\tomcat\02b287d9-ed64-49f4-aaab-aa31717db2ff\conf\logging.properties
 23-Aug-2021 09:56:05.239 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
 23-Aug-2021 09:56:05.239 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcom.sun.management.jmxremote=
 23-Aug-2021 09:56:05.239 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcom.sun.management.jmxremote.port=1099
@@ -45,7 +45,7 @@ NOTE: Picked up JDK_JAVA_OPTIONS:  --add-opens=java.base/java.lang=ALL-UNNAMED -
 23-Aug-2021 09:56:05.239 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [C:\Users\Р�Р»СЊСЏ\.jdks\corretto-11.0.12\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Java\jdk-16.0.2\bin;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\Р�Р»СЊСЏ\AppData\Local\Microsoft\WindowsApps;;.]
 23-Aug-2021 09:56:05.412 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
 23-Aug-2021 09:56:05.428 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [387] milliseconds
-23-Aug-2021 09:56:05.475 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+23-Aug-2021 09:56:05.475 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting ru.jm.service [Catalina]
 23-Aug-2021 09:56:05.475 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.52]
 23-Aug-2021 09:56:05.490 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
 23-Aug-2021 09:56:05.506 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [73] milliseconds

@@ -1,12 +1,14 @@
-package service;
+package ru.jm.service;
 
-import DAO.UserDAO;
-import model.User;
+import ru.jm.DAO.UserDAO;
+import ru.jm.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 @Service
+@Transactional
 public class UserServiceImpl implements UserService{
 
     @Autowired

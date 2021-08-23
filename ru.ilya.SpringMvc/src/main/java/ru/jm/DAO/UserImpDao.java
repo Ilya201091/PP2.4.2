@@ -1,25 +1,23 @@
-package DAO;
+package ru.jm.DAO;
 
-import model.User;
+import ru.jm.model.User;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.transaction.Transactional;
 import java.util.List;
 
 @Repository
-@Transactional
 public class UserImpDao implements UserDAO {
 
-    @PersistenceContext(unitName = "emf")
+    @PersistenceContext()
     EntityManager entityManager;
 
 
     @Override
     public List<User> allUser() {
         return entityManager.createQuery(
-                        "SELECT u FROM list_users u", User.class).getResultList();
+                "from User ", User.class).getResultList();
     }
 
     @Override
@@ -29,8 +27,7 @@ public class UserImpDao implements UserDAO {
 
     @Override
     public void edit(User user) {
-        User editUser = entityManager.merge(user);
-        user.setUser(editUser);
+      entityManager.merge(user);
     }
 
     @Override

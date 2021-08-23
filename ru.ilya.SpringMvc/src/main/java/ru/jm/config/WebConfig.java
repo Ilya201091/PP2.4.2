@@ -1,4 +1,4 @@
-package config;
+package ru.jm.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
@@ -13,7 +13,7 @@ import org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver;
 import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 
 @Configuration
-@ComponentScan("java")
+@ComponentScan("ru.jm")
 @EnableWebMvc
 public class WebConfig implements WebMvcConfigurer {
 
@@ -28,7 +28,7 @@ public class WebConfig implements WebMvcConfigurer {
     public SpringResourceTemplateResolver templateResolver() {
         SpringResourceTemplateResolver templateResolver = new SpringResourceTemplateResolver();
         templateResolver.setApplicationContext(applicationContext);
-        templateResolver.setPrefix("/WEB-INF/views/users");
+        templateResolver.setPrefix("/WEB-INF/views/users/");
         templateResolver.setSuffix(".html");
         return templateResolver;
     }

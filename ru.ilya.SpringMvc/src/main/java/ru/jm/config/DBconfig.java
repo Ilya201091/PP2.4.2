@@ -1,6 +1,5 @@
-package config;
+package ru.jm.config;
 
-import org.hibernate.jpa.HibernatePersistenceProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -8,15 +7,11 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
-import org.springframework.orm.hibernate5.HibernateTransactionManager;
-import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.springframework.web.servlet.view.JstlView;
-import org.springframework.web.servlet.view.UrlBasedViewResolver;
 
 
 import javax.sql.DataSource;
@@ -26,7 +21,7 @@ import java.util.Properties;
 @Configuration
 @EnableWebMvc
 @EnableTransactionManagement
-@ComponentScan("java")
+@ComponentScan("ru.jm")
 @PropertySource("classpath:db.properties")
 public class DBconfig {
 
@@ -54,12 +49,15 @@ public class DBconfig {
     LocalContainerEntityManagerFactoryBean entityManagerFactory() {
         LocalContainerEntityManagerFactoryBean emFactory = new LocalContainerEntityManagerFactoryBean();
         emFactory.setDataSource(dataSource());
-        emFactory.setPersistenceProviderClass(HibernatePersistenceProvider.class);
+        emFactory.setPackagesToScan("ru.jm");
         emFactory.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
+
         Properties properties = new Properties();
-        properties.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQLDialect");
+        properties.put("hibernate.show_sql", env.getRequiredProperty("hibernate.show_sql"));
+        properties.put("hibernate.hbm2ddl.auto", env.getRequiredProperty("hibernate.hbm2ddl.auto"));
+        properties.put("hibernate.dialect", env.getRequiredProperty("hibernate.dialect"));
         emFactory.setJpaProperties(properties);
-        emFactory.setPackagesToScan("entitymanager.packages.to.scan");
+
         return emFactory;
     }
 
