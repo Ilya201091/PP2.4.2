@@ -8,20 +8,17 @@
 <table th:border ="1">
     <tr>
         <th>Username</th>
-        <th>Email</th>
-        <th>Age</th>
     </tr>
     <tr th:each="user: ${listUsers}">
-    <td th:text="${user.genUsername()}">username</td>
-    <td th:text="${user.genEmail()}">email</td>
-    <td th:text="${user.genAge()}">age</td>
+    <td th:text="${user.getFirstName()}">Username</td>
     <td><a th:href="@{/users/{id}(id=${user.getId()})}">Info</a></td>
     <td><a th:href="@{/users/{id}/edit(id=${user.getId()})}">Edit</a></td>
-    <td><a th:href="@{/users/delete={id}(id=${user.getId()})}">Delete</a></td>
+    <!--<td><a th:href="@{/users/delete={id}(id=${user.getId()})}">Delete</a></td>-->
     </tr>
-<br>
     <form th:method="get" th:action="@{/users/new}">
-        <input type="submit" value="New User"></form>
+        <input type="submit" value="New User">
+    </form><br>
+
 
 </table>
 

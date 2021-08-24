@@ -34,4 +34,22 @@ public class UserImpDao implements UserDAO {
     public User getById(long id) {
         return entityManager.find(User.class, id);
     }
+
+    @Override
+    public void update(long id,User user) {
+        User newUser = getById(id);
+        newUser.setFirstName(user.getFirstName());
+        newUser.setEmail(user.getEmail());
+        newUser.setAge(user.getAge());
+    }
+
+    @Override
+    public void remove(long id) {
+        User user = getById(id);
+        if (user != null) {
+            entityManager.remove(user);
+        } else {
+            System.out.println("There is no such user");
+        }
+    }
 }

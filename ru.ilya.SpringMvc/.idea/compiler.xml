@@ -10,5 +10,8 @@
         <module name="ru.ilya.SpringMvc" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ru.ilya.SpringMvc" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

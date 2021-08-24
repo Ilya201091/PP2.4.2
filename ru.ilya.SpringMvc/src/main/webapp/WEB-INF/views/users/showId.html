@@ -2,28 +2,27 @@
 <html lang="en" xmlns:th="http://thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>User Info</title>
 </head>
 <body>
-<table th:border="1">
-
+<table th:border ="1">
     <tr>
-        <th ></th>
-        <th>UserName</th>
+        <th>Username</th>
         <th>Email</th>
         <th>Age</th>
     </tr>
     <tr>
-        <td th:text="${user.getName()}">username</td>
-        <td th:text="${user.getEmail()}">email</td>
-        <td th:text="${user.getAge()}">age</td>
-
+        <td th:text="${user.getFirstName()}">Username</td>
+        <td th:text="${user.getEmail()}">Email</td>
+        <td th:text="${user.getAge()}">Age</td>
+        <td><a th:href="@{/users/{id}/edit(id=${user.getId()})}">Edit</a></td>
+        <!--<td><a th:href="@{/users/delete={id}(id=${user.getId()})}">Delete</a></td>-->
+        <td><a th:href="@{/users}">Main</a></td>
+        <br>
+        <form th:method="delete" th:action="@{/users/{id}(id=${user.getId()})}">
+            <input type="submit" value="Delete">
+        </form>
     </tr>
 </table>
-<br>
-<form th:method="delete" th:action="@{/users/delete={id}(id=${user.getId()})}" id="delete">
-    <input type="submit" value="Return">
-</form>
-
 </body>
 </html>
