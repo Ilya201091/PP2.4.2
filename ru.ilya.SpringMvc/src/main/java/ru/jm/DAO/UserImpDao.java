@@ -5,6 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
 import java.util.List;
 
 @Repository
@@ -52,4 +53,14 @@ public class UserImpDao implements UserDAO {
             System.out.println("There is no such user");
         }
     }
+
+    @Override
+    public User getUserByName(String name) {
+        TypedQuery<User> query = entityManager.createQuery("from User u WHERE u u.firstName = :username", User.class);
+        query.setParameter("username",name);
+        return query.getSingleResult();
+
+    }
+
+
 }
