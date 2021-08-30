@@ -2,6 +2,7 @@ package ru.jm.config;
 
 import org.springframework.web.filter.HiddenHttpMethodFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
+import ru.jm.config.configSecurity.ConfigSecurity;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -9,7 +10,7 @@ import javax.servlet.ServletException;
 public class MySpringMvcDispatcherServlet extends AbstractAnnotationConfigDispatcherServletInitializer {
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return new Class[]{DBconfig.class};
+        return new Class[]{DBconfig.class, ConfigSecurity.class};
     }
 
     @Override

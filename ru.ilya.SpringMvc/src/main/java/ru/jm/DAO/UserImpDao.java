@@ -26,10 +26,10 @@ public class UserImpDao implements UserDAO {
         entityManager.persist(user);
     }
 
-    @Override
+  /*  @Override
     public void edit(User user) {
-      entityManager.merge(user);
-    }
+          entityManager.merge(user);
+    }*/
 
     @Override
     public User getById(long id) {

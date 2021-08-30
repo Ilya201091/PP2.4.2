@@ -10,30 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b3c1e90-fac1-4f42-adf2-0947c62cba47" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_5_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_5_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_crypto_5_5_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_5_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/ru_ilya_SpringMvc_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/ru_ilya_SpringMvc_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/bc0343dd-a224-4f76-add5-f4657364154d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/bc0343dd-a224-4f76-add5-f4657364154d.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/bc0343dd-a224-4f76-add5-f4657364154d/entities/entities.dat" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/bc0343dd-a224-4f76-add5-f4657364154d/entities/entities.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/bc0343dd-a224-4f76-add5-f4657364154d/entities/entities.dat.values" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/bc0343dd-a224-4f76-add5-f4657364154d/entities/entities.dat.values" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/bc0343dd-a224-4f76-add5-f4657364154d/entities/entities.dat.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/bc0343dd-a224-4f76-add5-f4657364154d/entities/entities.dat.values.at" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/bc0343dd-a224-4f76-add5-f4657364154d/entities/entities.dat.values.s" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/bc0343dd-a224-4f76-add5-f4657364154d/entities/entities.dat.values.s" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/bc0343dd-a224-4f76-add5-f4657364154d/entities/entities.dat_i" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/bc0343dd-a224-4f76-add5-f4657364154d/entities/entities.dat_i" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ru.ilya.SpringMvc.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ru.ilya.SpringMvc.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/jm/DAO/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/jm/DAO/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/jm/DAO/UserImpDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/jm/DAO/UserImpDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/jm/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/jm/config/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/jm/initDb/InitUsersDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/jm/initDb/InitUsersDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/jm/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/jm/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/jm/DAO/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/jm/DAO/UserDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/jm/DAO/UserImpDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/jm/DAO/UserImpDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/jm/initDb/InitUsersDB.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/jm/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/jm/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/jm/service/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/jm/service/UserDetailsServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +76,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../example 2.4.1/SpringMVC_Security_Example" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../example 2.4.1/spring_security" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -234,6 +216,7 @@
       <workItem from="1630077627439" duration="2503000" />
       <workItem from="1630080673984" duration="2309000" />
       <workItem from="1630110335354" duration="1545000" />
+      <workItem from="1630119753273" duration="2601000" />
     </task>
     <servers />
   </component>

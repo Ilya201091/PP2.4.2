@@ -5,11 +5,11 @@ import ru.jm.model.User;
 import java.util.List;
 
 public interface UserDAO {
-    List<User> allUser();
-    void add(User user);
-    void edit(User user);
-    User getById(long id);
-    void update(long id,User user);
-    void remove(long id);
-    User getUserByName(String name);
+    List<User> allUser(); //все юзеры
+    void add(User user); // добавить юзера
+  /*  void edit(User user); // изменить юзера*/
+    User getById(long id); // выгрузить Юзера по id
+    void update(long id,User user); //изменить юзера
+    void remove(long id); //удалить по id
+    User getUserByName(String name); //выгрузить сущность юзера по имени
 }

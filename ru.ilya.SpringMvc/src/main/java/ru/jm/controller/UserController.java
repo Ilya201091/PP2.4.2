@@ -9,7 +9,6 @@ import ru.jm.service.UserService;
 
 
 @Controller
-@RequestMapping("/users")
 public class UserController {
 
     private final UserService userService;
@@ -20,14 +19,14 @@ public class UserController {
     }
 
     //весь список
-    @GetMapping()
+    @GetMapping("/users")
     public String getAllUsers(Model model) {
         model.addAttribute("listUsers", userService.allUser());
         return "list";
     }
 
     //отображение человека
-    @GetMapping("/{id}")
+    @GetMapping("/profile/{id}")
     public String findId(@PathVariable("id")Long id, Model model) {
         model.addAttribute("user", userService.getById(id));
         return "showId";
