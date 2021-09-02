@@ -6,7 +6,6 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
-import javax.validation.constraints.Size;
 import java.util.Collection;
 import java.util.Set;
 
@@ -24,7 +23,6 @@ public class User implements UserDetails {
 
     @Column(name = "name")
     @NonNull
-    @Size(min=5, message = "Не меньше 5 знаков")
     private String firstName;
 
     @Column(name="password")
@@ -44,8 +42,6 @@ public class User implements UserDetails {
             joinColumns=@JoinColumn(name="user_id"),
             inverseJoinColumns=@JoinColumn(name = "role_id"))
     private Set<Role> roles;
-
-    //методы UserDetails
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -81,4 +77,6 @@ public class User implements UserDetails {
     public boolean isEnabled() {
         return true;
     }
+
+
 }

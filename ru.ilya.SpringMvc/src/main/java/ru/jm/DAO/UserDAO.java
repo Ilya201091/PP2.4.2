@@ -1,5 +1,6 @@
 package ru.jm.DAO;
 
+import ru.jm.model.Role;
 import ru.jm.model.User;
 
 import java.util.List;
@@ -12,4 +13,5 @@ public interface UserDAO {
     void update(long id,User user); //изменить юзера
     void remove(long id); //удалить по id
     User getUserByName(String name); //выгрузить сущность юзера по имени
+    Role getRole(String role); //установка роли
 }

@@ -9,6 +9,7 @@ import ru.jm.service.UserService;
 
 
 import javax.annotation.PostConstruct;
+import java.util.HashSet;
 import java.util.Set;
 
 @Component
@@ -27,16 +28,22 @@ public class InitUsersDB {
     public void initApiUserData() {
         Role roleAdmin = new Role("ROLE_ADMIN");
         Role roleUser = new Role("ROLE_USER");
+        Set<Role> rolesForAdmin = new HashSet<>();
+        Set<Role> rolesForUser = new HashSet<>();
+
+        rolesForAdmin.add(roleAdmin);
+        rolesForAdmin.add(roleUser);
+
+        rolesForUser.add(roleUser);
 
         roleService.addRole(roleAdmin);
-        roleService.addRole(roleUser);                      //Andrey
-        User user1 = new User("Andrey","{bcrypt}$2y$10$k6hAHt35z833A2XXqAEDjOdfYLyCMgl/Q6CtLWvBTH.oaD8ZGol4y",
+        roleService.addRole(roleUser);
+        User user1 = new User("Andrey","Andrey",
                 "andey@ya.ru", (byte) 53);
-        user1.setRoles((Set<Role>) roleAdmin);
-                                                           //Olga
-        User user2 = new User("Olga","{bcrypt}$2y$10$3ByryyEPK.gYqgpKHI0XL.ZQYXKhd34fvjdjDo/zJndKyoTYwjHe2",
+        user1.setRoles(rolesForAdmin);
+        User user2 = new User("Olga","Olga",
                 "olga@mail.ru",(byte) 50);
-        user2.setRoles((Set<Role>)roleUser);
+        user2.setRoles(rolesForUser);
         userService.add(user1);
         userService.add(user2);
     }

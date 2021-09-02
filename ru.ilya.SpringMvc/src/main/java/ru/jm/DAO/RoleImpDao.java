@@ -5,6 +5,7 @@ import ru.jm.model.Role;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 @Repository
 public class RoleImpDao implements RolesDAO{
@@ -15,7 +16,7 @@ public class RoleImpDao implements RolesDAO{
     @Override
     public List<Role> allRole() {//список ролей
         return entityManager.createQuery(
-                "from Role ", Role.class).getResultList();
+                "from Role").getResultList();
     }
 
 
@@ -41,4 +42,8 @@ public class RoleImpDao implements RolesDAO{
         entityManager.persist(role);
     }
 
+    @Override
+    public Role findRoleById(Long id) throws NoSuchElementException {
+        return entityManager.find(Role.class,id);
+    }
 }

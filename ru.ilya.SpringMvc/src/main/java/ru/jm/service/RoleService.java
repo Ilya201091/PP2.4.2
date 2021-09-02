@@ -12,5 +12,7 @@ public interface RoleService  {
 
     void removeRole(Role role);//удалить роль
 
-    void addRole(Role role);//создать роль
+    Role addRole(Role role);//создать роль
+
+    Role findById(Long id);
 }

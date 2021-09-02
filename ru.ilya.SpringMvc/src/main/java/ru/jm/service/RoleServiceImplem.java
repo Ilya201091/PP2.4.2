@@ -36,7 +36,12 @@ public class RoleServiceImplem implements RoleService {
     }
 
     @Override
-    public void addRole(Role role) {
+    public Role addRole(Role role) {
         rolesDAO.addRole(role);
+        return role;
+    }
+    @Override
+    public Role findById(Long id) {
+        return rolesDAO.findRoleById(id);
     }
 }

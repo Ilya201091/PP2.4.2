@@ -1,10 +1,12 @@
 package ru.jm.DAO;
 
+import ru.jm.model.Role;
 import ru.jm.model.User;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 import java.util.List;
 
@@ -56,10 +58,12 @@ public class UserImpDao implements UserDAO {
 
     @Override
     public User getUserByName(String name) {
-        TypedQuery<User> query = entityManager.createQuery("from User u WHERE u u.firstName = :username", User.class);
-        query.setParameter("username",name);
-        return query.getSingleResult();
+        return entityManager.createQuery("SELECT u FROM User u WHERE u.firstName = '"+ name +"'", User.class).getSingleResult();
+    }
 
+    @Override
+    public Role getRole(String role) {
+        return entityManager.createQuery ("SELECT u FROM Role u WHERE u.roleName = '"+ role +"'", Role.class).getSingleResult();
     }
 
 

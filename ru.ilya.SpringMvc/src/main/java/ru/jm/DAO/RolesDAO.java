@@ -18,5 +18,9 @@ public interface RolesDAO {
 
     void addRole(Role role);//создать роль
 
+    Role findRoleById(Long id);
+
+
+
 }
 
