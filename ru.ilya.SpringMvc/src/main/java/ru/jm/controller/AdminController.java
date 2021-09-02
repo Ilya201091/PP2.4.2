@@ -74,9 +74,8 @@ public class AdminController {
 
     //запрос редактирования
     @PatchMapping("/{id}")
-    public String update(@ModelAttribute("user") User user,
-                         @PathVariable("id") long id) {
-        userService.update(id,user);
+    public String update(@ModelAttribute("user") User user) {
+        userService.update(user);
         return "redirect:/admin/users";
     }
 

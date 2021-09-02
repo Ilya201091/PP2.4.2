@@ -10,7 +10,7 @@ public interface UserDAO {
     void add(User user); // добавить юзера
   /*  void edit(User user); // изменить юзера*/
     User getById(long id); // выгрузить Юзера по id
-    void update(long id,User user); //изменить юзера
+    void update(User user); //изменить юзера
     void remove(long id); //удалить по id
     User getUserByName(String name); //выгрузить сущность юзера по имени
     Role getRole(String role); //установка роли

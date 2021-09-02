@@ -42,8 +42,8 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    public void update(long id,User user){
-        userDAO.update(id,user);
+    public void update(User user){
+        userDAO.update(user);
     }
     @Override
     public void remove(long id) {
@@ -61,6 +61,6 @@ public class UserServiceImpl implements UserService{
         if(user == null) {
             throw new UsernameNotFoundException("User with name" + s);
         }
-        return userDAO.getUserByName(s);
+        return user;
     }
 }

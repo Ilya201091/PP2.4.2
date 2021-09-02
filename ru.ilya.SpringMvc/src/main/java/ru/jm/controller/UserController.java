@@ -15,13 +15,13 @@ import ru.jm.service.UserService;
 
 
 @Controller
-public class UserPage {
+public class UserController {
 
 
     private final UserService userService;
 
     @Autowired
-    public UserPage(RoleService roleService, UserService userService) {
+    public UserController(RoleService roleService, UserService userService) {
         this.userService = userService;
     }
 

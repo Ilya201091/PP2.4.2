@@ -1,13 +1,12 @@
 package ru.jm.DAO;
 
+import org.springframework.security.crypto.password.PasswordEncoder;
 import ru.jm.model.Role;
 import ru.jm.model.User;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
-import javax.persistence.TypedQuery;
 import java.util.List;
 
 @Repository
@@ -15,6 +14,11 @@ public class UserImpDao implements UserDAO {
 
     @PersistenceContext()
     EntityManager entityManager;
+    private final PasswordEncoder passwordEncoder;
+
+    public UserImpDao(PasswordEncoder passwordEncoder) {
+        this.passwordEncoder = passwordEncoder;
+    }
 
 
     @Override
@@ -39,11 +43,13 @@ public class UserImpDao implements UserDAO {
     }
 
     @Override
-    public void update(long id,User user) {
-        User newUser = getById(id);
-        newUser.setFirstName(user.getFirstName());
-        newUser.setEmail(user.getEmail());
-        newUser.setAge(user.getAge());
+    public void update(User user) {
+        String oldPassword = getById(user.getId()).getPassword();
+        String newPassword = user.getPassword();
+        if(!oldPassword.equals(newPassword)) {
+            user.setPassword(passwordEncoder.encode(user.getPassword()));
+        }
+        entityManager.merge(user);
     }
 
     @Override

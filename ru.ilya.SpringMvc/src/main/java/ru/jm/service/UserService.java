@@ -10,7 +10,7 @@ public interface UserService extends UserDetailsService {
     List<User> allUser();
     void add(User user);
     User getById(long id);
-    void update(long id,User user);
+    void update(User user);
     void remove(long id);
     Role getRole(String role);
 }
